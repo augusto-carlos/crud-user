@@ -1,0 +1,19 @@
+<center>
+    <h3>Lista de usuários</h3>
+</center>
+<hr>
+<a href="/usuarios/novo"><button class="btn btn-success">Adicionar usuário</button></a>
+
+{{#each users}}
+
+<div class="card my-4">
+    <h3>
+        {{name}}
+    </h3>
+    <p>
+        {{age}}
+    </p>
+</div>
+{{else}}
+<h3>Nenhum cadastrado :(</h3>
+{{/each}}
