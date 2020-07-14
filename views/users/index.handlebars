@@ -4,16 +4,28 @@
 <hr>
 <a href="/usuarios/novo"><button class="btn btn-success">Adicionar usuário</button></a>
 
-{{#each users}}
+<div class="row">
 
-<div class="card my-4">
-    <h3>
-        {{name}}
-    </h3>
-    <p>
-        {{age}}
-    </p>
+    {{#each users}}
+
+    <div class="col-4">
+        <div class="card my-4 text-center">
+            <div class="card-body p-2">
+                <h3>
+                    {{name}}
+                </h3>
+                <p>
+                    idade: {{age}}
+                </p>
+            </div>
+            <div class="card-footer">
+                <a href="" class="text-primary btn">EDIT</a>|
+                <a href="" class="text-danger btn">DELETE</a>
+            </div>
+        </div>
+    </div>
+
+    {{else}}
+    <h3>Nenhum cadastrado :(</h3>
+    {{/each}}
 </div>
-{{else}}
-<h3>Nenhum cadastrado :(</h3>
-{{/each}}
